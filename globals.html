@@ -429,7 +429,7 @@
 								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/yieldexpression.html" class="tsd-kind-icon">Yield<wbr>Expression</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-external">
+						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-is-external"><a href="globals.html#binary" class="tsd-kind-icon">Binary</a></li>
@@ -516,6 +516,7 @@
 								<li class="tsd-kind-type-alias tsd-is-external"><a href="globals.html#spreadproperty" class="tsd-kind-icon">Spread<wbr>Property</a></li>
 								<li class="tsd-kind-type-alias tsd-is-external"><a href="globals.html#statement" class="tsd-kind-icon">Statement</a></li>
 								<li class="tsd-kind-type-alias tsd-is-external"><a href="globals.html#symlinktype" class="tsd-kind-icon">Symlink<wbr>Type</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#tgetopenrpcdocument" class="tsd-kind-icon">TGet<wbr>OpenRPCDocument</a></li>
 								<li class="tsd-kind-type-alias tsd-is-external"><a href="globals.html#tsentityname" class="tsd-kind-icon">TSEntity<wbr>Name</a></li>
 								<li class="tsd-kind-type-alias tsd-is-external"><a href="globals.html#tstype" class="tsd-kind-icon">TSType</a></li>
 								<li class="tsd-kind-type-alias tsd-is-external"><a href="globals.html#tstypeelement" class="tsd-kind-icon">TSType<wbr>Element</a></li>
@@ -1022,7 +1023,6 @@
 								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#parse" class="tsd-kind-icon">parse</a></li>
 								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#parseasync" class="tsd-kind-icon">parse<wbr>Async</a></li>
 								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#parseexpression" class="tsd-kind-icon">parse<wbr>Expression</a></li>
-								<li class="tsd-kind-function"><a href="globals.html#parseopenrpcdocument" class="tsd-kind-icon">parse<wbr>OpenRPCDocument</a></li>
 								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#parsesync" class="tsd-kind-icon">parse<wbr>Sync</a></li>
 								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#pathexists" class="tsd-kind-icon">path<wbr>Exists</a></li>
 								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#pathexistssync" class="tsd-kind-icon">path<wbr>Exists<wbr>Sync</a></li>
@@ -1176,7 +1176,7 @@
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-external">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-is-external">
 					<a name="binary" class="tsd-anchor"></a>
@@ -2506,6 +2506,37 @@
 							<li>Defined in node_modules/@types/fs-extra/index.d.ts:269</li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="tgetopenrpcdocument" class="tsd-anchor"></a>
+					<h3>TGet<wbr>OpenRPCDocument</h3>
+					<div class="tsd-signature tsd-kind-icon">TGet<wbr>OpenRPCDocument<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/7b18afd/src/get-open-rpc-document.ts#L2">src/get-open-rpc-document.ts:2</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>schema<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/openrpc.html" class="tsd-signature-type">OpenRPC</a><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>schema: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/openrpc.html" class="tsd-signature-type">OpenRPC</a><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-is-external">
 					<a name="tsentityname" class="tsd-anchor"></a>
@@ -7404,7 +7435,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/07a2b29/src/generate-method-id.ts#L63">src/generate-method-id.ts:63</a></li>
+									<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/7b18afd/src/generate-method-id.ts#L63">src/generate-method-id.ts:63</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -7472,7 +7503,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/07a2b29/src/generate-method-id.ts#L110">src/generate-method-id.ts:110</a></li>
+									<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/7b18afd/src/generate-method-id.ts#L110">src/generate-method-id.ts:110</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -17559,74 +17590,6 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function">
-					<a name="parseopenrpcdocument" class="tsd-anchor"></a>
-					<h3>parse<wbr>OpenRPCDocument</h3>
-					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">parse<wbr>OpenRPCDocument<span class="tsd-signature-symbol">(</span>schema<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/openrpc.html" class="tsd-signature-type">OpenRPC</a>, options<span class="tsd-signature-symbol">?: </span><a href="interfaces/iparseopenrpcdocumentoptions.html" class="tsd-signature-type">IParseOpenRPCDocumentOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/openrpc.html" class="tsd-signature-type">OpenRPC</a><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/07a2b29/src/parse-open-rpc-document.ts#L102">src/parse-open-rpc-document.ts:102</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Resolves an OpenRPC document from a variety of input types. The resolved OpenRPC document
-									will be dereferenced and validated against the <a href="https://github.com/open-rpc/meta-schema">meta-schema</a>.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>throws</dt>
-									<dd><p><a href="classes/openrpcdocumentvalidationerror.html">OpenRPCDocumentValidationError</a></p>
-									</dd>
-									<dt>throws</dt>
-									<dd><p><a href="classes/openrpcdocumentdereferencingerror.html">OpenRPCDocumentDereferencingError</a></p>
-									</dd>
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">const</span> { OpenRPC } <span class="hljs-keyword">from</span> <span class="hljs-string">"@open-rpc/meta-schema"</span>
-<span class="hljs-keyword">const</span> { parseOpenRPCDocument } <span class="hljs-keyword">from</span> <span class="hljs-string">"@open-rpc/schema-utils-js"</span>;
-
-<span class="hljs-keyword">try</span> {
-  <span class="hljs-keyword">const</span> fromUrl = <span class="hljs-keyword">await</span> parseOpenRPCDocument(<span class="hljs-string">"example.com/openrpc.json"</span>) <span class="hljs-keyword">as</span> OpenRPC;
-  <span class="hljs-keyword">const</span> fromFile = <span class="hljs-keyword">await</span> parseOpenRPCDocument(<span class="hljs-string">"example.com/openrpc.json"</span>) <span class="hljs-keyword">as</span> OpenRPC;
-  <span class="hljs-keyword">const</span> fromString = <span class="hljs-keyword">await</span> parseOpenRPCDocument(<span class="hljs-string">'{ "openrpc": "1.0.0", ... }'</span>) <span class="hljs-keyword">as</span> OpenRPC;
-  <span class="hljs-keyword">const</span> fromCwd = <span class="hljs-keyword">await</span> parseOpenRPCDocument() <span class="hljs-keyword">as</span> types.OpenRPC; <span class="hljs-comment">// default</span>
-} <span class="hljs-keyword">catch</span> (e) {
-  <span class="hljs-comment">// handle validation errors</span>
-}</code></pre>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> schema: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/openrpc.html" class="tsd-signature-type">OpenRPC</a><span class="tsd-signature-symbol"> =&nbsp;&quot;./openrpc.json&quot;</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The OpenRPC document or a reference to one.</p>
-										<p>If schema is an object, it will use this as the openrpc document literally.
-										If schema is a string, it may fall under 3 other categories:</p>
-										<ol>
-											<li>schema is an OpenRPC document as a json string.</li>
-											<li>schema is a url that resolves to an OpenRPC document.</li>
-											<li>schema is a file path, where the file at the path contains an OpenRPC document.</li>
-										</ol>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="interfaces/iparseopenrpcdocumentoptions.html" class="tsd-signature-type">IParseOpenRPCDocumentOptions</a><span class="tsd-signature-symbol"> =&nbsp;defaultParseOpenRPCDocumentOptions</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Parser options. See <a href="interfaces/iparseopenrpcdocumentoptions.html">IParseOpenRPCDocumentOptions</a></p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/openrpc.html" class="tsd-signature-type">OpenRPC</a><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>The same OpenRPC Document that was passed in, but with all $ref&#39;s dereferenced.</p>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
 					<a name="parsesync" class="tsd-anchor"></a>
 					<h3>parse<wbr>Sync</h3>
@@ -22329,7 +22292,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/07a2b29/src/validate-open-rpc-document.ts#L53">src/validate-open-rpc-document.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/7b18afd/src/validate-open-rpc-document.ts#L53">src/validate-open-rpc-document.ts:53</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -23299,9 +23262,6 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#generatemethodresultid" class="tsd-kind-icon">generate<wbr>Method<wbr>Result<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#parseopenrpcdocument" class="tsd-kind-icon">parse<wbr>OpenRPCDocument</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#validateopenrpcdocument" class="tsd-kind-icon">validate<wbr>OpenRPCDocument</a>
