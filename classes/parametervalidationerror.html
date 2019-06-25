@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>OpenRPCDocumentValidationError | @open-rpc/schema-utils-js</title>
+	<title>ParameterValidationError | @open-rpc/schema-utils-js</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="openrpcdocumentvalidationerror.html">OpenRPCDocumentValidationError</a>
+					<a href="parametervalidationerror.html">ParameterValidationError</a>
 				</li>
 			</ul>
-			<h1>Class OpenRPCDocumentValidationError</h1>
+			<h1>Class ParameterValidationError</h1>
 		</div>
 	</div>
 </header>
@@ -67,20 +67,15 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Provides an error interface for OpenRPC Document validation</p>
+						<p>Provides an error interface for handling when a function call has invalid parameters.</p>
 					</div>
-					<dl class="tsd-comment-tags">
-						<dt>category</dt>
-						<dd><p>Errors</p>
-						</dd>
-					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">OpenRPCDocumentValidationError</span>
+						<span class="target">ParameterValidationError</span>
 					</li>
 				</ul>
 			</section>
@@ -97,14 +92,17 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="openrpcdocumentvalidationerror.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="parametervalidationerror.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="openrpcdocumentvalidationerror.html#message" class="tsd-kind-icon">message</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="openrpcdocumentvalidationerror.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="parametervalidationerror.html#expectedschema" class="tsd-kind-icon">expected<wbr>Schema</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="parametervalidationerror.html#message" class="tsd-kind-icon">message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="parametervalidationerror.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="parametervalidationerror.html#paramindex" class="tsd-kind-icon">param<wbr>Index</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="parametervalidationerror.html#receievedparam" class="tsd-kind-icon">receieved<wbr>Param</a></li>
 							</ul>
 						</section>
 					</div>
@@ -116,13 +114,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>OpenRPCDocument<wbr>Validation<wbr>Error<span class="tsd-signature-symbol">(</span>errors<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ErrorObject</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="openrpcdocumentvalidationerror.html" class="tsd-signature-type">OpenRPCDocumentValidationError</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Parameter<wbr>Validation<wbr>Error<span class="tsd-signature-symbol">(</span>paramIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, expectedSchema<span class="tsd-signature-symbol">: </span><a href="../interfaces/schema.html" class="tsd-signature-type">Schema</a>, receievedParam<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, errors<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ErrorObject</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="parametervalidationerror.html" class="tsd-signature-type">ParameterValidationError</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/ae0f48e/src/validate-open-rpc-document.ts#L19">src/validate-open-rpc-document.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/ae0f48e/src/method-call-validator/parameter-validation-error.ts#L9">src/method-call-validator/parameter-validation-error.ts:9</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -130,15 +128,40 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
+									<h5>paramIndex: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The index of the param that for this error (index
+											of the param in MethodObject.params).</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>expectedSchema: <a href="../interfaces/schema.html" class="tsd-signature-type">Schema</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The expected JSON Schema for the passed in value.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>receievedParam: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The value of the param passed to the method call.</p>
+										</div>
+									</div>
+								</li>
+								<li>
 									<h5>errors: <span class="tsd-signature-type">ErrorObject</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>The errors received by ajv.errors.</p>
+											<p>The errors recieved by ajv</p>
 										</div>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="openrpcdocumentvalidationerror.html" class="tsd-signature-type">OpenRPCDocumentValidationError</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="parametervalidationerror.html" class="tsd-signature-type">ParameterValidationError</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -146,24 +169,70 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="expectedschema" class="tsd-anchor"></a>
+					<h3>expected<wbr>Schema</h3>
+					<div class="tsd-signature tsd-kind-icon">expected<wbr>Schema<span class="tsd-signature-symbol">:</span> <a href="../interfaces/schema.html" class="tsd-signature-type">Schema</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/ae0f48e/src/method-call-validator/parameter-validation-error.ts#L20">src/method-call-validator/parameter-validation-error.ts:20</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The expected JSON Schema for the passed in value.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="message" class="tsd-anchor"></a>
 					<h3>message</h3>
 					<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/ae0f48e/src/validate-open-rpc-document.ts#L19">src/validate-open-rpc-document.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/ae0f48e/src/method-call-validator/parameter-validation-error.ts#L9">src/method-call-validator/parameter-validation-error.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="name" class="tsd-anchor"></a>
 					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;OpenRPCDocumentDereferencingError&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;ParameterValidationError&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/ae0f48e/src/validate-open-rpc-document.ts#L18">src/validate-open-rpc-document.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/ae0f48e/src/method-call-validator/parameter-validation-error.ts#L8">src/method-call-validator/parameter-validation-error.ts:8</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="paramindex" class="tsd-anchor"></a>
+					<h3>param<wbr>Index</h3>
+					<div class="tsd-signature tsd-kind-icon">param<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/ae0f48e/src/method-call-validator/parameter-validation-error.ts#L19">src/method-call-validator/parameter-validation-error.ts:19</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The index of the param that for this error (index
+							of the param in MethodObject.params).</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="receievedparam" class="tsd-anchor"></a>
+					<h3>receieved<wbr>Param</h3>
+					<div class="tsd-signature tsd-kind-icon">receieved<wbr>Param<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/open-rpc/schema-utils-js/blob/ae0f48e/src/method-call-validator/parameter-validation-error.ts#L21">src/method-call-validator/parameter-validation-error.ts:21</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The value of the param passed to the method call.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -180,16 +249,25 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="openrpcdocumentvalidationerror.html" class="tsd-kind-icon">OpenRPCDocument<wbr>Validation<wbr>Error</a>
+						<a href="parametervalidationerror.html" class="tsd-kind-icon">Parameter<wbr>Validation<wbr>Error</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="openrpcdocumentvalidationerror.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="parametervalidationerror.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="openrpcdocumentvalidationerror.html#message" class="tsd-kind-icon">message</a>
+								<a href="parametervalidationerror.html#expectedschema" class="tsd-kind-icon">expected<wbr>Schema</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="openrpcdocumentvalidationerror.html#name" class="tsd-kind-icon">name</a>
+								<a href="parametervalidationerror.html#message" class="tsd-kind-icon">message</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="parametervalidationerror.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="parametervalidationerror.html#paramindex" class="tsd-kind-icon">param<wbr>Index</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="parametervalidationerror.html#receievedparam" class="tsd-kind-icon">receieved<wbr>Param</a>
 							</li>
 						</ul>
 					</li>
